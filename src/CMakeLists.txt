@@ -10,7 +10,15 @@ set_target_properties(${EXE_NAME} PROPERTIES
 )
 
 find_package(fmt CONFIG REQUIRED)
+find_package(kompute CONFIG REQUIRED)
+
+# vulkan_compile_shader(
+#     INFILE shader/my_shader.comp
+#     OUTFILE shader/my_shader.hpp
+#     NAMESPACE "shader")
 
 target_link_libraries(${EXE_NAME} PRIVATE
   fmt::fmt
+  # shader
+  kompute::kompute
 )
