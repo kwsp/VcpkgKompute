@@ -13,5 +13,5 @@ The package kompute provides CMake targets:
     add_library(shader INTERFACE "shader/my_shader.hpp")
     target_include_directories(shader INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 
-
     target_link_libraries(main PRIVATE shader kompute::kompute)
+
